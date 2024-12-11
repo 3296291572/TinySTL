@@ -53,5 +53,8 @@
     <ClInclude Include="priority_queue.hpp">
       <Filter>源文件\STL</Filter>
     </ClInclude>
+    <ClInclude Include="dequeue.hpp">
+      <Filter>源文件\STL</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

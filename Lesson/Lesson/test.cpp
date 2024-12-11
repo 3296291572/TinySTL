@@ -7,6 +7,7 @@
 #include <vector>
 #include "unordered_map.hpp"
 #include "priority_queue.hpp"
+#include "dequeue.hpp"
 void Test3()
 {
 	tinystl::vector<int> v;
@@ -96,8 +97,37 @@ void test4()
 	pq.pop();
 	cout << pq.top() << endl;
 }
+
+void dequeue_test()
+{
+	tinystl::dequeue<int> ilist;
+	tinystl::dequeue<int> one;
+	int* ip = new int(3);
+	int* j = new int(5);
+	int* i = new int(7);
+	int* p = new int();
+	ilist.insertFront(ip);  
+	ilist.insertFront(j);   
+	ilist.insertBack(i);   
+	one = ilist; 
+	p = one.removeFront(); 
+	if(p!=nullptr)
+	cout << "one first number is:" << *p << endl; 
+	tinystl::dequeue<int> two(ilist);
+	p = two.removeFront(); 
+	if (p != nullptr)
+	cout << "two first number is:" << *p << endl; 
+	if (ip != nullptr)
+	ip = ilist.removeFront(); 
+	if (ip != nullptr)
+	cout << "ilist first number is:" << *ip << endl; 
+	j = ilist.removeBack(); 
+	if (j != nullptr)
+	cout << "ilist last number is:" << *j << endl; 
+}
 int main()
 {
+	dequeue_test();
 	
 	return 0;
 }

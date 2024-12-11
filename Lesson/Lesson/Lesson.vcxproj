@@ -135,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AVLtree.hpp" />
+    <ClInclude Include="dequeue.hpp" />
     <ClInclude Include="priority_queue.hpp" />
     <ClInclude Include="Queue.hpp" />
     <ClInclude Include="Stack.hpp" />
